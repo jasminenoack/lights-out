@@ -7,7 +7,7 @@ ul, li, h1, h2, h3, h4, h5, h6, p, div, section, article, a, body, html, button,
   background: transparent;
   text-align: inherit;
   text-decoration: none;
-  box-sizing: inherit;
+  box-sizing: border-box;
 }
 
 button, a {
@@ -29,13 +29,13 @@ h1 {
 
 ul {
   list-style: none;
-  width: 300px;
+  width: 400px;
   margin: auto;
 }
 
 li {
-    height: 50px;
-    width: 50px;
+    height: 76px;
+    width: 76px;
     background: blue;
     margin: 2px;
     border-radius: 10px;

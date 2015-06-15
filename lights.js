@@ -1,3 +1,5 @@
+window.current_level = 1
+
 var startup = function (sequence) {
     if (!sequence) {
         var sequence = [0, 5, 10, 15, 20, 21, 22, 23, 24, 19, 14, 9, 4, 3, 2, 1, 6, 11, 16, 17, 18, 13, 8, 7, 12]
@@ -17,16 +19,24 @@ var startup = function (sequence) {
 }
 
 var setup = function () {
+    console.log("setup")
     $(".on").removeClass("on")
-    $($("li")[12]).off
-    // $("li").click(handleClick)
+    $($("li")[12]).off()
+    loadLevel(window.levels["level" + window.current_level])
 }
 
-function getBlock (index) {
-    return $($("li")[index])
+var loadLevel = function (level_arr) {
+    $(".on").removeClass("on")
+    $("li").off()
+
+    for(var i = 0; i < level_arr.length; i++) {
+        $($("li")[level_arr[i]]).addClass("on")
+    }
+    $("li").click(handleClick)
 }
 
 var handleClick = function (event) {
+    console.log("handle")
     var block = $(event.currentTarget)
     var index = block.index()
     var left = index % 5 == 0
@@ -49,8 +59,13 @@ var handleClick = function (event) {
     }
 
     if (isComplete()) {
-        console.log("You win!")
+        window.current_level += 1
+        loadLevel(window.levels["level" + window.current_level])
     }
+}
+
+var getBlock = function (index) {
+    return $($("li")[index])
 }
 
 function isComplete () {

@@ -1,7 +1,7 @@
 window.levels = {}
 window.levels.level1 = [10, 12, 14]
 window.levels.level2 = [0, 2, 4, 5, 7, 9, 15, 17, 19, 20, 22, 24]
-window.levels.level3 = [1, 3, 5, 6, 8, 9, 10, 11, 13, 14, 15, 16, 18, 19, 21, 23]
+window.levels.level3 = [1, 4, 5, 6, 8, 9, 10, 11, 13, 14, 15, 16, 18, 19, 21, 23]
 window.levels.level4 = [5, 6, 8, 9, 15, 19, 20, 21, 23, 24]
 window.levels.level5 = [0, 1, 2, 3, 5, 6, 7, 9, 10, 11, 12, 14, 18, 19, 20, 21, 23, 24]
 window.levels.level6 = [10, 12, 14, 15, 17, 19, 21, 22, 23]
